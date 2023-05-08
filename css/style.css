@@ -15,27 +15,34 @@ img {
     max-width: 100%;
 }
 
+.logo {
+    width: 5%;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+}
+
 header {
     background-color: #06131f;
     width: 100%;
+    height: 80px;
     padding: 1em;
     position: fixed;
     z-index: 10;
 }
 
-.logo {
-    width: 5%;
-}
-
-.container {
-    width: 80%;
-}
-
 /*LAYOUT*/
 .row {
+    height: 100%;
     margin: 0 auto;
-    padding: 1em;
-    padding: 8em 4em;
+    overflow-y: auto;
+    padding: 5em 5em;
 }
 
 .col {
@@ -46,6 +53,7 @@ header {
     padding: 1em 2em 0em;
     height: 100%;
     background-color: #102030;
+    cursor: pointer;
 }
 
 .card-body {
@@ -69,4 +77,39 @@ h4 {
 h3 {
     font-size: 1rem;
     font-weight: 700;
+}
+
+/*BONUS*/
+.disco-info {
+    background-color: #10203080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    left: 1vw;
+    bottom: 3vh;
+    z-index: 11;
+    height: 98%;
+}
+
+.card-info {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-info img {
+    width: 80%;
+}
+
+.exit {
+    background-color: transparent;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0.1em 0.4em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
 }

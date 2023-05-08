@@ -25,25 +25,35 @@
 <body>
     <!-- APP -->
     <div id="app">
-        <header>
+        <div class="wrapper">
+            <header>
+                <div class="container">
+                    <img src="img/logo.png" alt="logo" class="logo">
+                </div>
+            </header>
             <div class="container">
-                <img src="img/logo.png" alt="logo" class="logo">
-            </div>
-        </header>
-        <div class="container">
-            <!-- <ul>
-                <li v-for="(disco,index) in dischi" :key="index">{{ disco.title }}</li>
-            </ul> -->
-            <div class="row row-cols-3">
-                <div class="col" v-for="(disco,index) in dischi" :for="index">
-                    <div class="card">
-                        <img :src="disco.poster" :alt="disco.name">
-                        <div class="card-body">
-                            <h2>{{ disco.title }}</h2>
-                            <h4>{{ disco.author }}</h4>
-                            <h3>{{ disco.year }}</h3>
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+                    <div class="col" v-for="(disco,index) in dischi" :for="index" @click="richiediInformazioni(index)">
+                        <div class="card">
+                            <img :src="disco.poster" :alt="disco.name">
+                            <div class="card-body">
+                                <h2>{{ disco.title }}</h2>
+                                <h4>{{ disco.author }}</h4>
+                                <h3>{{ disco.year }}</h3>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div v-if="discoCliccato">
+                <div class="disco-info">
+                    <div class="card-info">
+                        <img :src="elementoSelezionato.poster" :alt="elementoSelezionato.name">
+                        <h2>{{ elementoSelezionato.title }}</h2>
+                        <h4>{{ elementoSelezionato.author }}</h4>
+                        <h3>{{ elementoSelezionato.year }}</h3>
+                    </div>
+                    <button @click="discoCliccato=false" class="exit">x</button>
                 </div>
             </div>
         </div>
