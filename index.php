@@ -20,7 +20,9 @@
     <!-- APP -->
     <div id="app">
         <div class="container">
-            <h1></h1>
+            <ul>
+                <li v-for="(disco,index) in dischi" :key="index">{{ disco.title }}</li>
+            </ul>
         </div>
     </div>
     <!-- Fine APP -->
