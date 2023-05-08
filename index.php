@@ -14,15 +14,38 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- APP -->
     <div id="app">
+        <header>
+            <div class="container">
+                <img src="img/logo.png" alt="logo" class="logo">
+            </div>
+        </header>
         <div class="container">
-            <ul>
+            <!-- <ul>
                 <li v-for="(disco,index) in dischi" :key="index">{{ disco.title }}</li>
-            </ul>
+            </ul> -->
+            <div class="row row-cols-3">
+                <div class="col" v-for="(disco,index) in dischi" :for="index">
+                    <div class="card">
+                        <img :src="disco.poster" :alt="disco.name">
+                        <div class="card-body">
+                            <h2>{{ disco.title }}</h2>
+                            <h4>{{ disco.author }}</h4>
+                            <h3>{{ disco.year }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Fine APP -->

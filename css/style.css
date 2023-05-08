@@ -1,0 +1,72 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c2d3c;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background-color: #06131f;
+    width: 100%;
+    padding: 1em;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo {
+    width: 5%;
+}
+
+.container {
+    width: 80%;
+}
+
+/*LAYOUT*/
+.row {
+    margin: 0 auto;
+    padding: 1em;
+    padding: 8em 4em;
+}
+
+.col {
+    padding: 1em;
+}
+
+.card {
+    padding: 1em 2em 0em;
+    height: 100%;
+    background-color: #102030;
+}
+
+.card-body {
+    text-align: center;
+    color: white;
+    padding-bottom: 0.2em;
+}
+
+/*TIPOGRAFIA*/
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.5em;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
